@@ -1,0 +1,25 @@
+{
+  "name": "react-npm-node-errors",
+  "version": "0.0.1",
+  "description": "记录小白在npm,react,node开发过程中遇到的各种问题，持续更新",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangklfangl/react-npm-node-errors.git"
+  },
+  "keywords": [
+    "npm",
+    "react",
+    "nodejs",
+    "errors"
+  ],
+  "author": "liangklfangl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liangklfangl/react-npm-node-errors/issues"
+  },
+  "homepage": "https://github.com/liangklfangl/react-npm-node-errors#readme"
+}
