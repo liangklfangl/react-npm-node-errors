@@ -1,8 +1,8 @@
-问题：Warning: Unknown props `level` `index`, `parentMenu`, `eventKey`, `closeSubMenuOnMouseLeave`, `onItemHover`, `active, `openSubMenuOnMouseEnter` on <div> tag. Remove these props from the element
+##### 问题：Warning: Unknown props `level` `index`, `parentMenu`, `eventKey`, `closeSubMenuOnMouseLeave`, `onItemHover`, `active, `openSubMenuOnMouseEnter` on <div> tag. Remove these props from the element
 
 解答：详见,但是要注意，这个仅仅是warning，如果你的网页这时候无法显示不要以为就是这个原因，一般都不是这个原因
 
-问题： A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.
+##### 问题： A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.
 
 return 
   <div>
@@ -10,11 +10,11 @@ return
   </div>
 解答：也就是说在return后面要直接跟上div，而不要空行
 
-问题：Uncaught TypeError: Cannot call a class as a function
+##### 问题：Uncaught TypeError: Cannot call a class as a function
 
 解决：请确保你的Component继承了React.Component，否则你使用React语法就会出错。
 
-问题：Uncaught TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
+##### 问题：Uncaught TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
 
 将loader后面的import修改为require就可以了，因为此时还没有经过babel处理，也就是修改为如下：
 ```js
@@ -29,11 +29,11 @@ return 'import React from \'react\';\n' +
     code;
 ```
 
-问题：can not react auxiliaryCommentBefore of null
+##### 问题：can not react auxiliaryCommentBefore of null
 
 解决方案;将babel-generator降低到6.21.0即可
 
-问题：TypeError: Super expression must either be null or a function, not undefined
+##### 问题：TypeError: Super expression must either be null or a function, not undefined
 
 解决：说明你extend的那个函数没有导出相应的属性
 ```js
@@ -41,7 +41,7 @@ class AppGenerator extends Generators.Base{}
 ```
 如果Generators没有导出Base，那么报错
 
-问题：内容如下
+##### 问题：内容如下
 Module build failed: Error: React Hot Loader: The Webpack loader is now exported     separately. If you use Babel, we recommend that you remove "react-hot-loader" from the "loaders" section of your Webpack configuration altogether, and instead     add "react-hot-loader/babel" to the "plugins" section of your .babelrc file. If                        you prefer not to use Babel, replace "react-hot-loader" or "react-hot" with "rea ct-hot-loader/webpack" in the "loaders" section of your Webpack configuration.
     at Object.warnAboutIncorrectUsage (C:\Users\Administrator\Desktop\MyApp\node   _modules\react-hot-loader\lib\index.js:7:11)
  @ multi ./~/wds-hack?http://localhost:8080 webpack/hot/dev-server ./client.js
@@ -73,7 +73,7 @@ Child html-webpack-plugin for "index.html":
                 }]
               }
 ```
-问题：phantomjs报错
+##### 问题：phantomjs报错
 
 Error during loading "karma-phantomjs-launcher" plugin:
 Path must be a string. Received null
@@ -83,12 +83,12 @@ Path must be a string. Received null
   var phantomSource = require('phantomjs-prebuilt').path//这里获取到的path在2.1.7中存在
 ```
 
-问题：karma测试报错
+##### 问题：karma测试报错
 ReferenceError: Can't find variable: webpackJsonp 
 
 解决方法：ReferenceError: Can't find variable: webpackJsonp，也就是去掉commonchunkplugin
 
-问题:karma报错
+##### 问题:karma报错
 Error: Cannot resolve module 'react/lib/ReactMount'
 
 解决:参考资料Error: Cannot resolve module 'react/lib/ReactMount'   Module not found: Error: Cannot resolve module 'react/lib/ReactMount' in ...      Working with React 15   Cannot resolve module 'react/addons'
@@ -116,7 +116,7 @@ externals: {
   }
 ```
 
-问题：模块加载报错
+##### 问题：模块加载报错
 <pre>
 Module not found: Error: Can't resolve 'react/lib/ReactTestUtils' in 'C:\Users\Administrator\Desktop\yo-my\node_modules\react-addons-test-utils'
 </pre>
@@ -131,7 +131,7 @@ resolve: {
     }
   }
 ```
-问题：打包过程中遇到下面报错
+##### 问题：打包过程中遇到下面报错
 <pre>
 ERROR in ./src/styles/app.css
 Module build failed: Unknown word (5:1)
@@ -150,13 +150,13 @@ Module build failed: Unknown word (5:1)
 
 解决方案：是因为两次添加了webpack中loader来处理css/less/scss文件，导致loader重复了，所以直接去掉就可以了！
 
-问题：打包的时候说没有extract-text-webpack-plugin插件
+##### 问题：打包的时候说没有extract-text-webpack-plugin插件
 <pre>
  Error: "extract-text-webpack-plugin" loader is used without the corresponding  plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the   
 </pre> 
 解决方法：报错其实很明显，我没有添加webpack的extract-text-webpack-plugin插件，但是我在loader中使用了extract方法。当然，在这之前请确认你的extract-text-webpack-plugin插件的版本没有问题
 
-问题：报错说require不是一个函数
+##### 问题：报错说require不是一个函数
 <pre>
 TypeError: require(...) is not a function
     at Object.<anonymous> (C:\Users\Administrator\Desktop\mdw\bin\mdw:15:26)
@@ -174,10 +174,10 @@ TypeError: require(...) is not a function
 
 解决方法：因为我使用了export default而不是module.exports,所以你需要添加babel插件 "add-module-exports",
 
-问题：Uncaught Error: The root route must render a single element
+##### 问题：Uncaught Error: The root route must render a single element
 解决方法：请问你的组件是不是没有导出一个方法？如export default /module.export
 
-问题：这个问题是一个很简单的问题，但是可能报错的位置不正确导致很难找到
+##### 问题：这个问题是一个很简单的问题，但是可能报错的位置不正确导致很难找到
 <pre>
      message: 'Module build failed: Missed semicolon (6:1)\n\n \u001b[90m 4 | \u001b[39m margin-bottom\u001b[33m:\u001b[39m 24px\u001b[33m;\u001b[39m\n \u001b[90m 5 | \u001b[39m padding\u001b[33m:\u001b[
 39m0 48px\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m width\u001b[33m:\u001b[39m 100%\n \u001b[90m   | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u0
@@ -207,7 +207,7 @@ der\\index.js:146:22\n    at process._tickCallback (internal/process/next_tick.j
        at C:\Users\Administrator\Desktop\mdw\node_modules\postcss-loader\index.js:146:13
 </pre>
 
-问题：当Link中迭代一个对象的时候报错
+##### 问题：当Link中迭代一个对象的时候报错
 <pre>
 Uncaught Error: Objects are not valid as a React child (found: object with keys {zh-CN, en-US}). If you meant to render a collection of children, use an array instead or wrap the object using createFragment(object) from the React add-ons. Check the render method of `Link`.
 Uncaught TypeError: Cannot read property '__reactInternalInstance$nxdvao9iv2sfaq4x9z4pr2j4i' of null
@@ -232,7 +232,7 @@ Uncaught TypeError: Cannot read property '__reactInternalInstance$nxdvao9iv2sfaq
             {item.title["zh-CN"]}
   <\/Link>
 ```
-问题：markdown转化为Jsonml时候出错
+##### 问题：markdown转化为Jsonml时候出错
 <pre>
 ERROR in ./lib/utils/data.js
 Module build failed: YAMLException: can not read a block mapping entry; a multi
@@ -270,7 +270,7 @@ title: Alert
 ```
 是因为"subtitle:"和"警告提示"之间少了一个空格，加上就没问题了！
 
-问题：使用react-a11y时候报错
+##### 问题：使用react-a11y时候报错
 <pre>
 jsx报错Uncaught RangeError: Maximum call stack size exceeded
 </pre>
@@ -286,7 +286,7 @@ constructor(){
 ```
 我们不要将a11y(React)放在render方法中，而是放在constructor里面!
 
-问题：无状态组件的书写问题
+##### 问题：无状态组件的书写问题
 <pre>
 Uncaught Error: Module build failed: SyntaxError: C:/Users/Administrator/Desktop/sy-template/theme/template/content/Article.jsx: Unexpected token, expected ; (8:10)
 
@@ -308,7 +308,7 @@ export default (props)=>{
 }
 ```
 
-问题：reactJS报错
+##### 问题：reactJS报错
 <pre>
 ReactJs 报错 Element type is invalid: expected a string (from built-in components) or a class/function (for composite components) but got: undefined. Check the render method of `Me`.
 </pre>
@@ -353,7 +353,7 @@ var Home = function Home(_ref) {
 ```
 发现是_alert2为undefined，其实和前面的解决方法是一样的，那就是我们import进来的不是一个对象，而是空~~
 
-问题：React的setState的问题
+##### 问题：React的setState的问题
 <pre>
 Uncaught TypeError: Cannot read property 'setState' of null
     at handleCodeExpand (http://localhost:8090/components/alert/index.js:15093:9)
@@ -373,7 +373,7 @@ Uncaught TypeError: Cannot read property 'setState' of null
 ```
 生命周期方法我们还是采用普通的写法，而我们自定义的方法采用了变量的形式~~~~
 
-问题：使用expose-loader的时候出错
+##### 问题：使用expose-loader的时候出错
 <pre>
 Uncaught ReferenceError: global is not defined
     at Object._hyphenPattern (jquery.js:1)
@@ -394,7 +394,7 @@ Uncaught ReferenceError: global is not defined
 ```
 你也可以参考这里问题1 问题2
 
-问题：记一次React排错过程
+##### 问题：记一次React排错过程
 <pre>
 报错信息：
 Uncaught Error: Minified React error #37; visit http://facebook.github.io/react/docs/error-decoder.html?invariant=37 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
@@ -410,7 +410,7 @@ _registerComponent(...): Target container is not a DOM element.
 </pre>
 是不是很容易理解，对于我的问题最后发现是因为if判断的问题，导致我这里都会使用自己的htmlTemplate，而我们的这个模版本身不含id为"react-content"的元素导致的~~。更加有意思的是，设置了`process.env.NODE_ENV="development"`后，我们看到的信息就是后面链接的信息。以后记住这个就好了。之所以出现这个是因为React本身将报错信息在production模式下进行了encode  Error decoder
 
-问题：Babel打包出错
+##### 问题：Babel打包出错
 <pre>
   { SyntaxError: unknown: Unexpected token (4:8)
   2 |
